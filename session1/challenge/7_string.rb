@@ -5,4 +5,9 @@
 # pirates_say_arrrrrrrrr("Pirates say arrrrrrrrr")        # => "arrrrrrrr"
 
 def pirates_say_arrrrrrrrr(string)
+    string.downcase.chars.map.with_index do |char, index|
+        if char == "r"
+            string[index+1]
+        end
+    end.compact.join
 end
